@@ -1,4 +1,4 @@
-const dataTest = [1, 2, 3, 4];
+const testData = [1, 2, 3, 4];
 
 function sumFor(data) {
   let total = 0;
@@ -8,7 +8,7 @@ function sumFor(data) {
   return total;
 }
 
-console.log(sumFor(dataTest));
+console.log((sumFor(testData)));
 
 function sumWhile(data) {
   let total = 0;
@@ -20,7 +20,7 @@ function sumWhile(data) {
   return total;
 }
 
-console.log(sumWhile(dataTest));
+console.log(sumWhile(testData));
 
 function sumRecursion(data) {
   if (data.length === 0) {
@@ -29,10 +29,10 @@ function sumRecursion(data) {
   return data[0] + sumRecursion(data.slice(1, data.length));
 }
 
-console.log(sumRecursion(dataTest));
+console.log(sumRecursion(testData));
 
 function sumTheSimpleWay(data) {
-  return _.reduce(data, (memo, num) => memo + num);
+  return _.reduce(data, function (memo, num) { return memo + num; }, 0);
 }
 
-console.log(sumTheSimpleWay(dataTest));
+console.log(sumTheSimpleWay(testData));
